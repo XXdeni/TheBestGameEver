@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class EnemyAI : MonoBehaviour
 {
     private NavMeshAgent _navMeshAgent;
-  
+
     public List<Transform> patrolPoints;
 
 
@@ -16,11 +16,11 @@ public class EnemyAI : MonoBehaviour
         PickNewPatrolPoint();
     }
 
-    
+
     void Update()
     {
-        
-        if(_navMeshAgent.remainingDistance == 1)
+
+        if (_navMeshAgent.remainingDistance == 0)
         {
             PickNewPatrolPoint();
         }

@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        _characterController=GetComponent<CharacterController>();
+        _characterController = GetComponent<CharacterController>();
     }
     private void Update()
     {
@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
         {
             _moveVector += transform.forward;
         }
-        
+
         if (Input.GetKey(KeyCode.S))
         {
             _moveVector -= transform.forward;
@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
         {
             _moveVector += transform.right;
         }
-        
+
         if (Input.GetKey(KeyCode.A))
         {
             _moveVector -= transform.right;
@@ -48,11 +48,11 @@ public class PlayerController : MonoBehaviour
         _characterController.Move(_moveVector * speed * Time.deltaTime);
         _fallVelocity += gravity * Time.fixedDeltaTime;
         _characterController.Move(Vector3.down * _fallVelocity * Time.fixedDeltaTime);
-        if( _characterController.isGrounded )
+        if (_characterController.isGrounded)
         {
             _fallVelocity = 0;
         }
 
     }
-    
+
 }
