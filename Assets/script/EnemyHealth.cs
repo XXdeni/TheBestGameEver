@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    public int Health = 100;
+    public float Health = 100;
 
 
 
-    public void DealDamage(int damage)
+    public void DealDamage(float damage)
     {
         Health -= damage;
         if (Health <= 0)

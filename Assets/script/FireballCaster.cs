@@ -8,7 +8,7 @@ public class FireballCaster : MonoBehaviour
     public Fireball fireballPrefab;
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -18,6 +18,7 @@ public class FireballCaster : MonoBehaviour
         {
             Instantiate(fireballPrefab, FireballSource.position, FireballSource.rotation);
         }
-           
+       
+
     }
 }
